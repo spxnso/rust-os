@@ -1,0 +1,12 @@
+[profile.dev]
+panic = "abort" # We have to disable unwinding for kernel development.
+
+[profile.release]
+panic = "abort" # Same here.
+
+[workspace]
+members = [
+  "kernel",
+  "boot/bios",
+]
+resolver = "3"

@@ -1,0 +1,15 @@
+[package]
+name = "bios"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+kernel = { path = "../../kernel", features = ["bios"] }
+bootloader = "0.9"
+
+
+[[bin]]
+name = "bios"
+test = false # For now we disable it for compatibility. I heard it was possible to enable it later, but I haven't tried yet.
+bench = false # Same case as above.
+
