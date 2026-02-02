@@ -24,7 +24,25 @@ rustup override set nightly
 
 ### QEMU
 
-Install QEMU and ensure `qemu-system-x86_64` is on your `PATH`.
+Install QEMU for testing
+
+#### Arch Linux
+
+```bash
+sudo pacman -S qemu-full
+```
+
+#### Debian/Ubuntu
+
+```bash
+sudo apt update
+sudo apt install qemu-system-x86 qemu-utils ovmf
+```
+
+#### Fedora
+```bash
+sudo dnf install qemu-system-x86 qemu-img gcc
+```
 
 ## Usage
 
@@ -38,12 +56,14 @@ cd rust-os
 ### Build + run (recommended)
 
 ```bash
+chmod  +x ./scripts/run.sh
 ./scripts/run.sh
 ```
 
 ### Build only
 
 ```bash
+chmod +x ./scripts/build.sh
 ./scripts/build.sh
 ```
 

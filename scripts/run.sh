@@ -6,7 +6,8 @@ BOOTIMAGE="target/x86_64-unknown-none/debug/bootimage-bios.bin"
 
 if [ ! -f "$BOOTIMAGE" ]; then
     echo "Bootimage not found, building..."
-    ./build.sh
+    chmod +x scripts/build.sh
+    scripts/build.sh
 fi
 
 echo "Starting QEMU..."
